@@ -17,5 +17,7 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 Route::get('/', function () {
-    return view('layout.landing');
+    return view('admin.index');
 });
+Route::view('email', 'page.index');
+Route::resource('data', 'DataUserController');
