@@ -12,7 +12,7 @@
                     <a href="{{route('exportEmail')}}" class="btn btn-primary">Export</a>
                     <!-- Table with outer spacing -->
                     <div class="table-responsive">
-                        <table class="table">
+                        <table id = "dataatable"class="table">
                             <thead>
                                 <tr>
                                     <th>No</th>

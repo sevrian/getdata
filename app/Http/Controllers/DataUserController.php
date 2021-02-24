@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\EmailModel;
+use Illuminate\Support\Facades\Redirect;
 
 class DataUserController extends Controller
 {
@@ -24,7 +25,6 @@ class DataUserController extends Controller
      */
     public function create()
     {
-
     }
 
     /**
@@ -35,9 +35,9 @@ class DataUserController extends Controller
      */
     public function store(Request $request)
     {
-        $insert=EmailModel::create($request->all());
-        $request->session()->flash('success','Data berhasil disimpan');
-        return redirect()->route('kuisioner.index');
+        $insert = EmailModel::create($request->all());
+        $request->session()->flash('success', 'Data berhasil disimpan');
+        return redirect::to('https://www.grandmercure.com/our-hotels/');
     }
 
     /**

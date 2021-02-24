@@ -16,11 +16,12 @@ class EmailController extends Controller
      */
     public function index()
     {
-        $data=EmailModel::orderBy('created_at','DESC')->get();
-        return view('admin.index',['data' => $data]);
+        $data = EmailModel::orderBy('created_at', 'DESC')->get();
+        return view('admin.index', ['data' => $data]);
     }
-    public function exportEmail(){
-        return Excel::download(new EmailExport, 'DaftarEmail.xlsx');        
+    public function exportEmail()
+    {
+        return Excel::download(new EmailExport, 'DaftarEmail.xlsx');
     }
     /**
      * Show the form for creating a new resource.
