@@ -28,6 +28,7 @@ Route::post('/login', 'AuthController@login');
 Route::group(['middleware' => 'auth'], function () {
 
     Route::get('home', 'EmailController@index')->name('home');
+    Route::get('exportemail', 'EmailController@exportEmail')->name('exportEmail');
     Route::get('logout', 'AuthController@logout')->name('logout');
 
 });

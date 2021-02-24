@@ -4,7 +4,8 @@ namespace App\Http\Controllers;
 
 use App\EmailModel;
 use Illuminate\Http\Request;
-
+use App\Exports\EmailExport;
+use Maatwebsite\Excel\Facades\Excel;
 
 class EmailController extends Controller
 {
@@ -18,7 +19,9 @@ class EmailController extends Controller
         $data=EmailModel::all();
         return view('admin.index',['data' => $data]);
     }
-
+    public function exportEmail(){
+        return Excel::download(new EmailExport, 'DaftarEmail.xlsx');        
+    }
     /**
      * Show the form for creating a new resource.
      *
