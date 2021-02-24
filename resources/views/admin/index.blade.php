@@ -1,4 +1,7 @@
 @extends('layout.landing')
+@push('css')
+    
+@endpush
 @section('content')
 <div class="row" id="basic-table">
     <div class="col-12">
@@ -12,7 +15,7 @@
                     <a href="{{route('exportEmail')}}" class="btn btn-primary">Export</a>
                     <!-- Table with outer spacing -->
                     <div class="table-responsive">
-                        <table id = "dataatable"class="table">
+                        <table  class="table" id ="datatable">
                             <thead>
                                 <tr>
                                     <th>No</th>
@@ -39,3 +42,11 @@
     </div>
 </div>
 @endsection
+
+@push('scrips_js')
+    <script>
+        $(Document).ready(function(){
+            $('#datatable').DataTable();
+        });
+    </script>
+@endpush

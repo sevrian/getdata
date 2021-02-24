@@ -237,6 +237,11 @@
     <!-- BEGIN: Page JS-->
     <script src="{{  url  ( 'app-assets/js/scripts/forms/form-tooltip-valid.js')}}"></script>
     <!-- END: Page JS-->
+    <script>
+        $(Document).ready(function(){
+            $('datatable').DataTable();
+        });
+    </script>
 
 </body>
 <!-- END: Body-->

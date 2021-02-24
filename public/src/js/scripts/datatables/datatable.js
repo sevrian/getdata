@@ -87,7 +87,7 @@ $(document).ready(function() {
 
 
     /**************************************************************
-    * js of Tab for COLUMN SELECTORS WITH EXPORT AND PRINT OPTIONS *
+    * js of Tab for COLUMN SELECTORS WITH EXPORT AND PRINT OPTIONS *data
     ***************************************************************/
 
     $('.dataex-html5-selectors').DataTable( {
