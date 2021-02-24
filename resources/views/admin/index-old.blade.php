@@ -17,26 +17,36 @@
                        <table class="table">
                            <thead>
                                <tr>
-                                   <th>No</th>
+                                   <th>ID</th>
                                    <th>Name</th>
                                    <th>Email</th>
-                                   <th>Phone</th>
+                                   <th>User ID</th>
                                </tr>
                            </thead>
                            <tbody>
-                                @foreach($data AS $row)
-                                <tr>
-                                    <th scope="row">{{$loop->iteration}}</th>
-                                    <td>{{$row->nama}}</td>
-                                    <td>{{$row->email}}</td>
-                                    <td>{{$row->no_tlp}}</td>
-                                </tr>
-                                @endforeach
+                               <tr>
+                                   <th scope="row">1</th>
+                                   <td>Leanne Graham</td>
+                                   <td>sincere@april.biz</td>
+                                   <td>@mdo</td>
+                               </tr>
+                               <tr>
+                                   <th scope="row">2</th>
+                                   <td>Ervin Howell</td>
+                                   <td>shanna@melissa.tv</td>
+                                   <td>@fat</td>
+                               </tr>
+                               <tr>
+                                   <th scope="row">3</th>
+                                   <td>Clementine Bauch</td>
+                                   <td>nathan@yesenia.net</td>
+                                   <td>@twitter</td>
+                               </tr>
                            </tbody>
                        </table>
                    </div>
                </div>
-
+              
            </div>
        </div>
    </div>
