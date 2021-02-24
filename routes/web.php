@@ -13,21 +13,21 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', function () {
-//     return view('admin.index');
-// });
-Route::get('/', 'EmailController@index');
-Route::view('email', 'page.index');
-Route::resource('data', 'DataUserController');
+Route::get('/', function () {
+    return redirect()->route('login');
+});
+// Route::get('/', 'EmailController@index');
+// Route::view('email', 'page.index');
+Route::resource('/kuisioner', 'DataUserController');
 
-Route::get('login', 'AuthController@showFormLogin')->name('login');
-Route::post('login', 'AuthController@login');
-Route::get('register', 'AuthController@showFormRegister')->name('register');
-Route::post('register', 'AuthController@register');
+Route::get('/login', 'AuthController@showFormLogin')->name('login');
+Route::post('/login', 'AuthController@login');
+// Route::get('/register', 'AuthController@showFormRegister')->name('register');
+// Route::post('/register', 'AuthController@register');
 
 Route::group(['middleware' => 'auth'], function () {
 
-    Route::get('home', 'HomeController@index')->name('home');
+    Route::get('home', 'EmailController@index')->name('home');
     Route::get('logout', 'AuthController@logout')->name('logout');
 
 });
