@@ -64,7 +64,7 @@
                                                 <h4 class="mb-0">Login</h4>
                                             </div>
                                         </div>
-                                        <p class="px-2">Welcome back, please login to your account.</p>
+                                        <p class="px-2">Welcome back, please login to your account or fill  <a href="{{route('kuisioner.index')}}" class="text-primary">Kuisioner</a></p>
                                         <div class="card-content">
                                             <div class="card-body pt-1">
                                                 <form action="{{ route('login') }}" method="post">
@@ -97,13 +97,14 @@
                                                                     <span class="">Remember me</span>
                                                                 </div>
                                                             </fieldset>
+                                                            
                                                         </div>
                                                         <div class="text-right"><a href="auth-forgot-password.html" class="card-link">Forgot Password?</a></div>
                                                     </div>
                                                     <a href="auth-register.html" class="btn btn-outline-primary float-left btn-inline">Register</a>
                                                     <button type="submit" class="btn btn-primary float-right btn-inline">Login</button>
                                                 </form>
-                                            </div>
+                                            </div>        
                                         </div>
                                         <div class="login-footer">
                                             <div class="divider">

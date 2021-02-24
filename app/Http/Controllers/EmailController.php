@@ -16,7 +16,7 @@ class EmailController extends Controller
      */
     public function index()
     {
-        $data=EmailModel::all();
+        $data=EmailModel::orderBy('created_at','DESC')->get();
         return view('admin.index',['data' => $data]);
     }
     public function exportEmail(){

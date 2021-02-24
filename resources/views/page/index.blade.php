@@ -127,11 +127,18 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div class="card">
+                                @if(session()->has('success'))
+                                    <div class="alert alert-success">
+                                    <p clas="text-success">{{session()->get('success')}}</p>
+                                    </div>
+                                    
+                                @endif
                                 <div class="card-header" style="background-color: rgb(223, 223, 248); margin-bottom: 5px">
                                   <p class="text-center"><h2>Untuk Melanjutkan Menggunakan Internet mohon masukan Email</h2> </p> 
                                 </div>
                                 <div class="card-body">
-                                 <form class="form form-horizontal">
+                                 <form class="form form-horizontal" action="{{route('kuisioner.store')}}" method="post">
+                                    @csrf
                                      <div class="form-body">
                                          <div class="row">
                                              <div class="col-12">
@@ -141,7 +148,7 @@
                                                      </div>
                                                      <div class="col-md-8">
                                                          <div class="position-relative has-icon-left">
-                                                             <input type="text" id="fname-icon" class="form-control" name="fname-icon" placeholder="First Name">
+                                                             <input type="text" id="fname-icon" class="form-control" name="nama" placeholder="First Name">
                                                              <div class="form-control-position">
                                                                  <i class="feather icon-user"></i>
                                                              </div>
@@ -156,7 +163,7 @@
                                                      </div>
                                                      <div class="col-md-8">
                                                          <div class="position-relative has-icon-left">
-                                                             <input type="email" id="email-icon" class="form-control" name="email-id-icon" placeholder="Email">
+                                                             <input type="email" id="email-icon" class="form-control" name="email" placeholder="Email">
                                                              <div class="form-control-position">
                                                                  <i class="feather icon-mail"></i>
                                                              </div>
@@ -171,7 +178,7 @@
                                                      </div>
                                                      <div class="col-md-8">
                                                          <div class="position-relative has-icon-left">
-                                                             <input type="number" id="contact-icon" class="form-control" name="contact-icon" placeholder="Mobile">
+                                                             <input type="number" id="contact-icon" class="form-control" name="no_tlp" placeholder="Mobile">
                                                              <div class="form-control-position">
                                                                  <i class="feather icon-smartphone"></i>
                                                              </div>
@@ -182,7 +189,7 @@
                                              
                                              
                                              <div class="col-md-8 offset-md-4">
-                                                 <button type="submit" class="btn btn-primary mr-1 mb-1">Submit</button>
+                                                 <button type="submit" class="btn btn-primary mr-1 mb-1">Simpan</button>
                                                  <button type="reset" class="btn btn-outline-warning mr-1 mb-1">Reset</button>
                                              </div>
                                          </div>
