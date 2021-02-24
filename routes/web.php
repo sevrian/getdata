@@ -19,6 +19,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('page.index');
 });
+Route::view('/login', 'admin.login');
+
 Route::get('/email', 'EmailController@index');
 //Route::view('email', 'page.index');
 //Route::resource('data', 'DataUserController');
