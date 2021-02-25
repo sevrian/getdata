@@ -16,7 +16,7 @@
 
     <!-- BEGIN: Vendor CSS-->
     <link rel="stylesheet" type="text/css" href="{{ url ( 'app-assets/vendors/css/vendors.min.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{ url ( 'app-assets/vendors/css/tables/datatable/datatables.min.css')}}">
+    <!-- <link rel="stylesheet" type="text/css" href="{{ url ( 'app-assets/vendors/css/tables/datatable/datatables.min.css')}}"> -->
     <!-- END: Vendor CSS-->
 
     <!-- BEGIN: Theme CSS-->
@@ -26,7 +26,9 @@
     <link rel="stylesheet" type="text/css" href="{{ url ( 'app-assets/css/components.css')}}">
     <link rel="stylesheet" type="text/css" href="{{ url ( 'app-assets/css/themes/dark-layout.css')}}">
     <link rel="stylesheet" type="text/css" href="{{ url ( 'app-assets/css/themes/semi-dark-layout.css')}}">
-  
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/jszip-2.5.0/dt-1.10.23/b-1.6.5/b-colvis-1.6.5/b-flash-1.6.5/b-html5-1.6.5/b-print-1.6.5/datatables.min.css"/>
+ 
+
   
     <!-- BEGIN: Page CSS-->
     <link rel="stylesheet" type="text/css" href="{{ url ( 'app-assets/css/core/menu/menu-types/horizontal-menu.css')}}">
@@ -145,9 +147,12 @@
     <script src="{{ url ( 'app-assets/js/core/app-menu.js')}}"></script>
     <script src="{{ url ( 'app-assets/js/core/app.js')}}"></script>
     <script src="{{ url ( 'app-assets/js/scripts/components.js')}}"></script>
-    <script src="{{ url ( 'app-assets/vendors/js/tables/datatable/datatables.min.js')}}"></script>
-    <script src="{{ url ( 'app-assets/vendors/js/tables/datatable/datatables.bootstrap4.min.js')}}"></script>
+    <!-- <script src="{{ url ( 'app-assets/vendors/js/tables/datatable/datatables.min.js')}}"></script>
+    <script src="{{ url ( 'app-assets/vendors/js/tables/datatable/datatables.bootstrap4.min.js')}}"></script> -->
 
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/vfs_fonts.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/v/dt/jszip-2.5.0/dt-1.10.23/b-1.6.5/b-colvis-1.6.5/b-flash-1.6.5/b-html5-1.6.5/b-print-1.6.5/datatables.min.js"></script>
     
     <!-- END: Theme JS-->
     @stack('scrips_js')

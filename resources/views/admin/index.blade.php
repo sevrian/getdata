@@ -44,7 +44,12 @@
 @push('scrips_js')
     <script>
         $(Document).ready(function(){
-            $('#datatable').DataTable();
+            $('#datatable').DataTable({
+                dom: 'Bfrtip',
+                buttons: [
+                    'copy', 'excel', 'pdf'
+                ]
+            });
         });
     </script>
 @endpush
