@@ -6,6 +6,7 @@ use App\EmailModel;
 use Illuminate\Http\Request;
 use App\Exports\EmailExport;
 use Maatwebsite\Excel\Facades\Excel;
+use Illuminate\Support\Facades\DB;
 
 class EmailController extends Controller
 {
@@ -14,10 +15,24 @@ class EmailController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $data=EmailModel::latest()->get();
-        return view('admin.index',['data' => $data]);
+      if(request()->ajax()){
+        if(!empty($request->from_date))
+            {
+                $data = DB::table('tbl_order')
+                ->whereBetween('order_date', array($request->from_date, $request->to_date))
+                ->get();
+            }
+      else
+      {
+       $data = DB::table('tbl_order')
+         ->get();
+      }
+      return datatables()->of($data)->make(true);
+     }
+     return view('daterange');
+    }
     }
     public function exportEmail()
     {

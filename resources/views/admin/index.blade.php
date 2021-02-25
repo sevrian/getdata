@@ -45,10 +45,10 @@
     <script>
         $(Document).ready(function(){
             $('#datatable').DataTable({
-                dom: 'Bfrtip',
-                buttons: [
-                    'copy', 'excel', 'pdf'
-                ]
+                // dom: 'Bfrtip',
+                // buttons: [
+                //     'copy', 'excel', 'pdf'
+                // ]
             });
         });
     </script>
