@@ -19,8 +19,9 @@ class EmailController extends Controller
         $data=EmailModel::latest()->get();
         return view('admin.index',['data' => $data]);
     }
-    public function exportEmail(){
-        return Excel::download(new EmailExport, 'DaftarEmail.xlsx');        
+    public function exportEmail()
+    {
+        return Excel::download(new EmailExport, 'DaftarEmail.xlsx');
     }
     /**
      * Show the form for creating a new resource.

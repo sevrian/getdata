@@ -16,6 +16,7 @@
 
     <!-- BEGIN: Vendor CSS-->
     <link rel="stylesheet" type="text/css" href="{{ url ( 'app-assets/vendors/css/vendors.min.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ url ( 'app-assets/vendors/css/tables/datatable/datatables.min.css')}}">
     <!-- END: Vendor CSS-->
 
     <!-- BEGIN: Theme CSS-->
@@ -25,10 +26,12 @@
     <link rel="stylesheet" type="text/css" href="{{ url ( 'app-assets/css/components.css')}}">
     <link rel="stylesheet" type="text/css" href="{{ url ( 'app-assets/css/themes/dark-layout.css')}}">
     <link rel="stylesheet" type="text/css" href="{{ url ( 'app-assets/css/themes/semi-dark-layout.css')}}">
-
+  
+  
     <!-- BEGIN: Page CSS-->
     <link rel="stylesheet" type="text/css" href="{{ url ( 'app-assets/css/core/menu/menu-types/horizontal-menu.css')}}">
     <link rel="stylesheet" type="text/css" href="{{ url ( 'app-assets/css/core/colors/palette-gradient.css')}}">
+    @stack('css')
     <!-- END: Page CSS-->
 
     <!-- BEGIN: Custom CSS-->
@@ -78,7 +81,45 @@
     <!-- END: Main Menu-->
 
     <!-- BEGIN: Content-->
-   @include('layout.content')
+    <div class="app-content content">
+        <div class="content-overlay"></div>
+        <div class="header-navbar-shadow"></div>
+        <div class="content-wrapper">
+            <div class="content-header row">
+                <div class="content-header-left col-md-9 col-12 mb-2">
+                    <div class="row breadcrumbs-top">
+                        <div class="col-12">
+                            <h2 class="content-header-title float-left mb-0">Guest List</h2>
+                            <div class="breadcrumb-wrapper col-12">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="index.html">Home</a>
+                                    </li>
+                                    <li class="breadcrumb-item active">Table
+                                    </li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {{-- <div class="content-header-right text-md-right col-md-3 col-12 d-md-block d-none">
+                    <div class="form-group breadcrum-right">
+                        <div class="dropdown">
+                            <button class="btn-icon btn btn-primary btn-round btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="feather icon-settings"></i></button>
+                            <div class="dropdown-menu dropdown-menu-right"><a class="dropdown-item" href="#">Chat</a><a class="dropdown-item" href="#">Email</a><a class="dropdown-item" href="#">Calendar</a></div>
+                        </div>
+                    </div>
+                </div> --}}
+            </div>
+            <div class="content-body">
+                <!-- Basic Tables start -->
+                @yield('content')
+                <!-- Basic Tables end -->
+     
+              
+            </div>
+        </div>
+     </div>
+     
     <!-- END: Content-->
 
     <div class="sidenav-overlay"></div>
@@ -100,13 +141,16 @@
     <!-- BEGIN: Page Vendor JS-->
     <script src="{{ url ( 'app-assets/vendors/js/ui/jquery.sticky.js')}}"></script>
     <!-- END: Page Vendor JS-->
-
     <!-- BEGIN: Theme JS-->
     <script src="{{ url ( 'app-assets/js/core/app-menu.js')}}"></script>
     <script src="{{ url ( 'app-assets/js/core/app.js')}}"></script>
     <script src="{{ url ( 'app-assets/js/scripts/components.js')}}"></script>
-    <!-- END: Theme JS-->
+    <script src="{{ url ( 'app-assets/vendors/js/tables/datatable/datatables.min.js')}}"></script>
+    <script src="{{ url ( 'app-assets/vendors/js/tables/datatable/datatables.bootstrap4.min.js')}}"></script>
 
+    
+    <!-- END: Theme JS-->
+    @stack('scrips_js')
     <!-- BEGIN: Page JS-->
     <!-- END: Page JS-->
 
