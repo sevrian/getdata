@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return redirect()->route('login');
+    return redirect()->route('kuisioner.index');
 });
 Route::resource('/kuisioner', 'DataUserController');
 Route::get('/login', 'AuthController@showFormLogin')->name('login');
