@@ -1,7 +1,9 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use Faker\Factory as faker;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
+
 
 class UsersTabel extends Seeder
 {
@@ -12,15 +14,10 @@ class UsersTabel extends Seeder
    */
   public function run()
   {
-    $faker = Faker::create('id_ID');
-    for ($i = 1; $i <= 50; $i++) {
-      DB::table('users')->insert([
-        'name' => $faker->name,
-        'email' => $faker->unique()->safeEmail,
-        'email_verified_at' => now(),
-        'password' => bcrypt('password'),
-        'remember_token' => Str::random(10),
-      ]);
-    }
+    DB::table('users')->insert([
+      'name' => ('admin'),
+      'email' => ('admin@mail.com'),
+      'password' => Hash::make('password'),
+    ]);
   }
 }

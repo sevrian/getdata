@@ -17,23 +17,20 @@ class EmailController extends Controller
      */
     public function index(Request $request)
     {
-      if(request()->ajax()){
-        if(!empty($request->from_date))
-            {
-                $data = DB::table('tbl_order')
-                ->whereBetween('order_date', array($request->from_date, $request->to_date))
-                ->get();
+        if (request()->ajax()) {
+            if (!empty($request->from_date)) {
+                $data = DB::table('email')
+                    ->whereBetween('created_at', array($request->from_date, $request->to_date))
+                    ->get();
+            } else {
+                $data = DB::table('email')
+                    ->get();
             }
-      else
-      {
-       $data = DB::table('tbl_order')
-         ->get();
-      }
-      return datatables()->of($data)->make(true);
-     }
-     return view('daterange');
+            return datatables()->of($data)->make(true);
+        }
+        return view('admin.index');
     }
-    }
+
     public function exportEmail()
     {
         return Excel::download(new EmailExport, 'DaftarEmail.xlsx');
