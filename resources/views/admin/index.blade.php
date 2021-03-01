@@ -84,6 +84,10 @@
          name:'id'
         },
         {
+         data:'nama',
+         name:'nama'
+        },
+        {
          data:'email',
          name:'email'
         },
@@ -91,10 +95,7 @@
          data:'no_tlp',
          name:'no_tlp'
         },
-        {
-         data:'nama',
-         name:'nama'
-        },
+       
        
        ]
       });
