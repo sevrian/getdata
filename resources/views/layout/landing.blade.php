@@ -9,14 +9,24 @@
     <meta name="description" content="Vuexy admin is super flexible, powerful, clean &amp; modern responsive bootstrap 4 admin template with unlimited possibilities.">
     <meta name="keywords" content="admin template, Vuexy admin template, dashboard template, flat admin template, responsive admin template, web app">
     <meta name="author" content="PIXINVENT">
-    <title>Bootstrap Tables - Vuexy - Bootstrap HTML admin template</title>
+    <title>Grand Mercure</title>
     <link rel="apple-touch-icon" href="{{ url ( 'app-assets/images/ico/apple-icon-120.png')}}">
     <link rel="shortcut icon" type="image/x-icon" href="{{ url ( 'app-assets/images/ico/favicon.ico')}}">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600" rel="stylesheet">
 
     <!-- BEGIN: Vendor CSS-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+    <script src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.12/js/dataTables.bootstrap.min.js"></script>  
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.12/css/dataTables.bootstrap.min.css" />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/css/bootstrap-datepicker.css" />
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/js/bootstrap-datepicker.js"></script>
     <link rel="stylesheet" type="text/css" href="{{ url ( 'app-assets/vendors/css/vendors.min.css')}}">
     <link rel="stylesheet" type="text/css" href="{{ url ( 'app-assets/vendors/css/tables/datatable/datatables.min.css')}}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/css/bootstrap-datepicker.css" />
+    <link rel="stylesheet" type="text/css" href="{{ url ( 'app-assets/vendors/css/pickers/pickadate/pickadate.css')}}">
     <!-- END: Vendor CSS-->
 
     <!-- BEGIN: Theme CSS-->
@@ -90,8 +100,7 @@
                             <h2 class="content-header-title float-left mb-0">Guest List</h2>
                             <div class="breadcrumb-wrapper col-12">
                                 <ol class="breadcrumb">
-                                    <li class="breadcrumb-item"><a href="index.html">Home</a>
-                                    </li>
+                                  
                                     <li class="breadcrumb-item active">Table
                                     </li>
                                 </ol>
@@ -133,6 +142,7 @@
 
 
     <!-- BEGIN: Vendor JS-->
+    
     <script src="{{ url ( 'app-assets/vendors/js/vendors.min.js')}}"></script>
     <!-- BEGIN Vendor JS-->
 
@@ -145,14 +155,13 @@
     <script src="{{ url ( 'app-assets/js/scripts/components.js')}}"></script>
     <script src="{{ url ( 'app-assets/vendors/js/tables/datatable/pdfmake.min.js')}}"></script>
     <script src="{{ url ( 'app-assets/vendors/js/tables/datatable/vfs_fonts.js')}}"></script>
-    <!-- <script src="{{ url ( 'app-assets/vendors/js/tables/datatable/datatables.min.js')}}"></script>
-    <script src="{{ url ( 'app-assets/vendors/js/tables/datatable/datatables.buttons.min.js')}}"></script>
-    <script src="{{ url ( 'app-assets/vendors/js/tables/datatable/buttons.html5.min.js')}}"></script>
-    <script src="{{ url ( 'app-assets/vendors/js/tables/datatable/buttons.print.min.js')}}"></script>
-    -->
+    
     <script type="text/javascript" src="https://cdn.datatables.net/v/dt/jszip-2.5.0/dt-1.10.23/b-1.6.5/b-colvis-1.6.5/b-flash-1.6.5/b-html5-1.6.5/b-print-1.6.5/datatables.min.js"></script>
     <script src="{{ url ( 'app-assets/vendors/js/tables/datatable/buttons.bootstrap.min.js')}}"></script>
-    <script src="{{ url ( 'app-assets/vendors/js/tables/datatable/datatables.bootstrap4.min.js')}}"></script>               
+    <script src="{{ url ( 'app-assets/vendors/js/tables/datatable/datatables.bootstrap4.min.js')}}"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/js/bootstrap-datepicker.js"></script>               
+    <script src="{{ url ('app-assets/vendors/js/pickers/pickadate/picker.date.js')}}"></script>
     
     <!-- END: Theme JS-->
     @stack('scrips_js')
