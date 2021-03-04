@@ -89,26 +89,15 @@
         <div class="content-overlay"></div>
         <div class="header-navbar-shadow"></div>
         <div class="content-wrapper">
-            {{-- <div class="content-header row">
-                <div class="content-header-left col-md-9 col-12 mb-2">
-                    <div class="row breadcrumbs-top">
-                        <div class="col-12">
-                            <h2 class="content-header-title float-left mb-0">Input</h2>
-                            <div class="breadcrumb-wrapper col-12">
-                                <ol class="breadcrumb">
-                                    <li class="breadcrumb-item"><a href="index.html">Home</a>
-                                    </li>
-                                    <li class="breadcrumb-item"><a href="#">Form Elements</a>
-                                    </li>
-                                    <li class="breadcrumb-item active">Input
-                                    </li>
-                                </ol>
-                            </div>
+            <div class="navbar-header center">
+                
+                    
+                        <div class="mercure">
+                            <img src="{{ url ('app-assets/images/mercure.jpeg')}}" alt="avtar img holder">
                         </div>
-                    </div>
-                </div>
+                        <br>
                
-            </div> --}}
+            </div>
             <div class="content-body">
                {{-- <section id="welcome">
                   <div class="row">
@@ -134,7 +123,7 @@
                                     
                                 @endif
                                 <div class="card-header" style="background-color: rgb(223, 223, 248); margin-bottom: 5px">
-                                  <p class="text-center"><h2>Untuk Melanjutkan Menggunakan Internet mohon masukan Email</h2> </p> 
+                                  <p class="text-center"><h2>To use the internet, please enter your email</h2> </p> 
                                 </div>
                                 <div class="card-body">
                                  <form class="form form-horizontal" action="{{route('kuisioner.store')}}" method="post">
