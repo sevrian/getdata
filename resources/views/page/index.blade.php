@@ -89,12 +89,14 @@
         <div class="content-overlay"></div>
         <div class="header-navbar-shadow"></div>
         <div class="content-wrapper">
-            <div class="navbar-header d-xl-block d-none">
-                <ul class="nav navbar-nav flex-row">
-                    <li class="nav-item"><a class="navbar-brand" href="../../../html/ltr/horizontal-menu-template/index.html">
-                            <div class="brand-logo"></div>
-                        </a></li>
-                </ul>
+            <div class="navbar-header center">
+                
+                    
+                        <div class="mercure">
+                            <img src="{{ url ('app-assets/images/mercure.jpeg')}}" alt="avtar img holder">
+                        </div>
+                        <br>
+               
             </div>
             <div class="content-body">
                {{-- <section id="welcome">
