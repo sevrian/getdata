@@ -181,7 +181,7 @@
                                                         <span></span>
                                                     </div>
                                                     <div class="vs-checkbox-con vs-checkbox-primary">
-                                                        <input type="checkbox" name="status" checked="">
+                                                        <input type="checkbox" name="status" checked="" value="0">
                                                         <span class="vs-checkbox">
                                                             <span class="vs-checkbox--check">
                                                                 <i class="vs-icon feather icon-check"></i>
