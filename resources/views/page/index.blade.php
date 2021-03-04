@@ -134,7 +134,7 @@
                                     
                                 @endif
                                 <div class="card-header" style="background-color: rgb(223, 223, 248); margin-bottom: 5px">
-                                  <p class="text-center"><h2>Untuk Melanjutkan Menggunakan Internet mohon masukan Email</h2> </p> 
+                                  <p class="text-center"><h2>To use the internet, please enter your email</h2> </p> 
                                 </div>
                                 <div class="card-body">
                                  <form class="form form-horizontal" action="{{route('kuisioner.store')}}" method="post">
