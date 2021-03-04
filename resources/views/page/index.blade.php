@@ -89,26 +89,13 @@
         <div class="content-overlay"></div>
         <div class="header-navbar-shadow"></div>
         <div class="content-wrapper">
-            {{-- <div class="content-header row">
-                <div class="content-header-left col-md-9 col-12 mb-2">
-                    <div class="row breadcrumbs-top">
-                        <div class="col-12">
-                            <h2 class="content-header-title float-left mb-0">Input</h2>
-                            <div class="breadcrumb-wrapper col-12">
-                                <ol class="breadcrumb">
-                                    <li class="breadcrumb-item"><a href="index.html">Home</a>
-                                    </li>
-                                    <li class="breadcrumb-item"><a href="#">Form Elements</a>
-                                    </li>
-                                    <li class="breadcrumb-item active">Input
-                                    </li>
-                                </ol>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-               
-            </div> --}}
+            <div class="navbar-header d-xl-block d-none">
+                <ul class="nav navbar-nav flex-row">
+                    <li class="nav-item"><a class="navbar-brand" href="../../../html/ltr/horizontal-menu-template/index.html">
+                            <div class="brand-logo"></div>
+                        </a></li>
+                </ul>
+            </div>
             <div class="content-body">
                {{-- <section id="welcome">
                   <div class="row">
