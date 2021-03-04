@@ -91,7 +91,7 @@
         <div class="content-wrapper">
             <div class="navbar-header center"></div>
                 <div class="mercure">
-                    <img class="mx-auto d-block "src="{{ url ('app-assets/images/mercure.jpeg')}}" alt="mercure_logo">
+                    <img class="mx-auto d-block "src="{{ url ('app-assets/images/mercure.jpeg')}}" width="350px" height="120px" alt="mercure_logo">
                 </div>
                 <br>
             </div>
@@ -187,7 +187,7 @@
                                                         <span></span>
                                                     </div>
                                                     <div class="vs-checkbox-con vs-checkbox-primary">
-                                                        <input type="checkbox" name="status" checked="">
+                                                        <input type="checkbox" name="status" checked="checked" value='1'>
                                                         <span class="vs-checkbox">
                                                             <span class="vs-checkbox--check">
                                                                 <i class="vs-icon feather icon-check"></i>

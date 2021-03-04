@@ -36,6 +36,8 @@
                                     <th>Name</th>
                                     <th>Email</th>
                                     <th>Phone</th>
+                                    <th>Status</th>
+                                    <th>Created</th>
                                 </tr>
                             </thead>
                            
@@ -62,7 +64,6 @@
      function load_data(from_date = '', to_date = '')
      {
       $('#datatable').DataTable({
-     
        serverSide: true,
        dom: 'Bfrtip',
         buttons: [
@@ -95,8 +96,14 @@
          data:'no_tlp',
          name:'no_tlp'
         },
-       
-       
+        {
+         data:'status',
+         name:'status'
+        },
+        {
+         data:'created_at',
+         name:'created_at'
+        },       
        ]
       });
      }

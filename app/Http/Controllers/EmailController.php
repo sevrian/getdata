@@ -21,10 +21,10 @@ class EmailController extends Controller
             if (!empty($request->from_date)) {
                 $data = DB::table('email')
                     ->whereBetween('created_at', array($request->from_date, $request->to_date))
-                    ->get();
+                    ->latest();
             } else {
                 $data = DB::table('email')
-                    ->get();
+                    ->latest();
             }
             return datatables()->of($data)->make(true);
         }
