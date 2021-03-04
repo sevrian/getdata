@@ -33,10 +33,26 @@ class DataUserController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
+    public function cekEmail($email){
+        $cek_email=EmailModel::where('email',$email)->get();
+        if($cek_email->count()!=0){
+            return true;
+        }else{
+            return false;
+        }
+    }
     public function store(Request $request)
     {
-        $insert = EmailModel::create($request->all());
-        $request->session()->flash('success', 'Data berhasil disimpan');
+        $validated = $request->validate([
+            'nama' => 'required|max:255',
+            'email' => 'required|email',
+            'no_tlp' => 'required',
+        ]);
+        if(!$this->cekEmail($request->input('email'))){
+            $insert = EmailModel::create($request->all());
+        }
+        // $insert = EmailModel::create($request->all());
+        // $request->session()->flash('success', 'Data berhasil disimpan');
         return redirect::to('https://www.grandmercure.com/our-hotels/');
     }
 

@@ -89,14 +89,11 @@
         <div class="content-overlay"></div>
         <div class="header-navbar-shadow"></div>
         <div class="content-wrapper">
-            <div class="navbar-header center">
-                
-                    
-                        <div class="mercure">
-                            <img src="{{ url ('app-assets/images/mercure.jpeg')}}" alt="avtar img holder">
-                        </div>
-                        <br>
-               
+            <div class="navbar-header center"></div>
+                <div class="mercure">
+                    <img class="mx-auto d-block "src="{{ url ('app-assets/images/mercure.jpeg')}}" width="350px" height="120px" alt="mercure_logo">
+                </div>
+                <br>
             </div>
             <div class="content-body">
                {{-- <section id="welcome">
@@ -114,7 +111,7 @@
                 <!-- Basic Inputs start -->
                 <section id="basic-input">
                     <div class="row">
-                        <div class="col-md-12">
+                        <div class="col-md-8 mx-auto">
                             <div class="card">
                                 @if(session()->has('success'))
                                     <div class="alert alert-success">
@@ -142,6 +139,9 @@
                                                                  <i class="feather icon-user"></i>
                                                              </div>
                                                          </div>
+                                                        @error('nama')
+                                                            <p class="text-danger">{{ $message }}</p>
+                                                        @enderror
                                                      </div>
                                                  </div>
                                              </div>
@@ -157,6 +157,9 @@
                                                                  <i class="feather icon-mail"></i>
                                                              </div>
                                                          </div>
+                                                         @error('email')
+                                                            <p class="text-danger">{{ $message }}</p>
+                                                        @enderror
                                                      </div>
                                                  </div>
                                              </div>
@@ -172,6 +175,9 @@
                                                                  <i class="feather icon-smartphone"></i>
                                                              </div>
                                                          </div>
+                                                         @error('no_tlp')
+                                                            <p class="text-danger">{{ $message }}</p>
+                                                        @enderror
                                                      </div>
                                                  </div>
                                              </div>
@@ -181,13 +187,13 @@
                                                         <span></span>
                                                     </div>
                                                     <div class="vs-checkbox-con vs-checkbox-primary">
-                                                        <input type="checkbox" name="status" checked="" value="0">
+                                                        <input type="checkbox" name="status" checked="checked" value='1'>
                                                         <span class="vs-checkbox">
                                                             <span class="vs-checkbox--check">
                                                                 <i class="vs-icon feather icon-check"></i>
                                                             </span>
                                                         </span>
-                                                        <span class="">Agree</span>
+                                                        <span class="">Langganan informasi tentang Hotel Grand Mercure & Ibiz Yogyakarta</span>
                                                     </div>
                                                      
                                                 </div>
