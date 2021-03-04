@@ -16,8 +16,9 @@ class CreateEmailModelsTable extends Migration
         Schema::create('email', function (Blueprint $table) {
             $table->id();
             $table->string('email');
-            $table->string('no_tlp',20);
+            $table->string('no_tlp', 20);
             $table->string('nama');
+            $table->boolean('status')->default(1);
             $table->timestamps();
         });
     }
