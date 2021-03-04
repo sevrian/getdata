@@ -32,11 +32,9 @@
                         <table id ="datatable" class="table">
                             <thead>
                                 <tr>
-                                    <th>No</th>
                                     <th>Name</th>
                                     <th>Email</th>
                                     <th>Phone</th>
-                                    <th>Status</th>
                                     <th>Created</th>
                                 </tr>
                             </thead>
@@ -81,10 +79,6 @@
        
        columns: [
         {
-         data:'id',
-         name:'id'
-        },
-        {
          data:'nama',
          name:'nama'
         },
@@ -95,10 +89,6 @@
         {
          data:'no_tlp',
          name:'no_tlp'
-        },
-        {
-         data:'status',
-         name:'status'
         },
         {
          data:'created_at',

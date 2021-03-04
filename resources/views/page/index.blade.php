@@ -9,7 +9,7 @@
     <meta name="description" content="Vuexy admin is super flexible, powerful, clean &amp; modern responsive bootstrap 4 admin template with unlimited possibilities.">
     <meta name="keywords" content="admin template, Vuexy admin template, dashboard template, flat admin template, responsive admin template, web app">
     <meta name="author" content="PIXINVENT">
-    <title>Input - Vuexy - Bootstrap HTML admin template</title>
+    <title>Login Internet Access</title>
     <link rel="apple-touch-icon" href="{{  url  ( 'app-assets/images/ico/apple-icon-120.png')}}">
     <link rel="shortcut icon" type="image/x-icon" href="{{  url  ( 'app-assets/images/ico/favicon.ico')}}">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600" rel="stylesheet">
@@ -64,7 +64,7 @@
 
 
     <!-- BEGIN: Main Menu-->
-    <div class="horizontal-menu-wrapper">
+    <!-- <div class="horizontal-menu-wrapper">
         <div class="header-navbar navbar-expand-sm navbar navbar-horizontal floating-nav navbar-light navbar-without-dd-arrow navbar-shadow menu-border" role="navigation" data-menu="menu-wrapper">
             <div class="navbar-header">
                 <ul class="nav navbar-nav flex-row">
@@ -81,11 +81,11 @@
                
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- END: Main Menu-->
 
     <!-- BEGIN: Content-->
-    <div class="app-content content">
+    <div class="app-content content" style="padding-top:10px">
         <div class="content-overlay"></div>
         <div class="header-navbar-shadow"></div>
         <div class="content-wrapper">
@@ -99,12 +99,7 @@
                {{-- <section id="welcome">
                   <div class="row">
                       <div class="col-md-12">
-                        
-                              
-                             <h1 center>Selamat datang</h1>   
-                             
-                              
-                          
+                            <h1 center>Selamat datang</h1>
                       </div>
                   </div>
               </section> --}}
@@ -120,7 +115,7 @@
                                     
                                 @endif
                                 <div class="card-header" style="background-color: rgb(223, 223, 248); margin-bottom: 5px">
-                                  <p class="text-center"><h2>To use the internet, please enter your email</h2> </p> 
+                                  <p class="text-center"><h2>For access internet, please complete below format</h2> </p> 
                                 </div>
                                 <div class="card-body">
                                  <form class="form form-horizontal" action="{{route('kuisioner.store')}}" method="post">
@@ -134,7 +129,7 @@
                                                      </div>
                                                      <div class="col-md-8">
                                                          <div class="position-relative has-icon-left">
-                                                             <input type="text" id="fname-icon" class="form-control" name="nama" placeholder="First Name">
+                                                             <input type="text" id="fname-icon" class="form-control" name="nama" placeholder="Name">
                                                              <div class="form-control-position">
                                                                  <i class="feather icon-user"></i>
                                                              </div>
@@ -184,24 +179,20 @@
                                              <div class="col-12">
                                                 <div class="form-group row">
                                                     <div class="col-md-4">
-                                                        <span></span>
                                                     </div>
-                                                    <div class="vs-checkbox-con vs-checkbox-primary">
-                                                        <input type="checkbox" name="status" checked="checked" value='1'>
-                                                        <span class="vs-checkbox">
-                                                            <span class="vs-checkbox--check">
-                                                                <i class="vs-icon feather icon-check"></i>
-                                                            </span>
-                                                        </span>
-                                                        <span class="">Langganan informasi tentang Hotel Grand Mercure & Ibiz Yogyakarta</span>
+                                                    <div class="col-md-8">
+                                                        <p class="text-bold-600">Hotel Policies</p>
+                                                        <ul>
+                                                            <li>By Clicking “submit”, you agree to share your email address with us.</li>
+                                                            <li>Email address is only used for submitting our Guest Satisfaction Survey.</li>
+                                                            <li>Your email and mobile number will not be shared to any third parties.</li>
+                                                            <li>Your email and mobile number will not shared for any commercial use.</li>
+                                                        </ul>
                                                     </div>
-                                                     
                                                 </div>
                                             </div>
-                                             
                                              <div class="col-md-8 offset-md-4">
-                                                
-                                                 <button type="submit" class="btn btn-primary mr-1 mb-1">Save</button>
+                                                 <button type="submit" class="btn btn-primary mr-1 mb-1">Submit</button>
                                                  <button type="reset" class="btn btn-outline-warning mr-1 mb-1">Reset</button>
                                              </div>
                                          </div>
