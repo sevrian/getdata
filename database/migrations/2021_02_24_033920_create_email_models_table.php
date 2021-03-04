@@ -19,7 +19,7 @@ class CreateEmailModelsTable extends Migration
             $table->string('email');
             $table->string('no_tlp', 20)->nullable();
             $table->string('nama')->nullable();
-            $table->boolean('status')->nullable()->default(true);
+            $table->boolean('status')->nullable()->default(false);
             $table->timestamps();
         });
     }

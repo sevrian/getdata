@@ -175,10 +175,27 @@
                                                      </div>
                                                  </div>
                                              </div>
-                                             
+                                             <div class="col-12">
+                                                <div class="form-group row">
+                                                    <div class="col-md-4">
+                                                        <span></span>
+                                                    </div>
+                                                    <div class="vs-checkbox-con vs-checkbox-primary">
+                                                        <input type="checkbox" name="status" checked="">
+                                                        <span class="vs-checkbox">
+                                                            <span class="vs-checkbox--check">
+                                                                <i class="vs-icon feather icon-check"></i>
+                                                            </span>
+                                                        </span>
+                                                        <span class="">Agree</span>
+                                                    </div>
+                                                     
+                                                </div>
+                                            </div>
                                              
                                              <div class="col-md-8 offset-md-4">
-                                                 <button type="submit" class="btn btn-primary mr-1 mb-1">Simpan</button>
+                                                
+                                                 <button type="submit" class="btn btn-primary mr-1 mb-1">Save</button>
                                                  <button type="reset" class="btn btn-outline-warning mr-1 mb-1">Reset</button>
                                              </div>
                                          </div>
