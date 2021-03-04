@@ -35,8 +35,14 @@ class DataUserController extends Controller
      */
     public function store(Request $request)
     {
+        $validated = $request->validate([
+            'nama' => 'required|max:255',
+            'email' => 'required|email',
+            'no_tlp' => 'required',
+        ]);
+        // dd($$request->all());
         $insert = EmailModel::create($request->all());
-        $request->session()->flash('success', 'Data berhasil disimpan');
+        // $request->session()->flash('success', 'Data berhasil disimpan');
         return redirect::to('https://www.grandmercure.com/our-hotels/');
     }
 
