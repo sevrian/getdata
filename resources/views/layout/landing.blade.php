@@ -74,7 +74,6 @@
             </div>
             <!-- Horizontal menu content-->
             <div class="navbar-container main-menu-content" data-menu="menu-container">
-                <!-- include includes/mixins-->
                 <ul class="nav navbar-nav" id="main-menu-navigation" data-menu="menu-navigation">
                     <li><a class=" nav-link" href="{{route('home')}}" ><i class="feather icon-home"></i><span data-i18n="Dashboard">Dashboard</span></a>
                         
