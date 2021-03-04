@@ -33,11 +33,12 @@ class DataUserController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function cekEmail($email){
-        $cek_email=EmailModel::where('email',$email)->get();
-        if($cek_email->count()!=0){
+    public function cekEmail($email)
+    {
+        $cek_email = EmailModel::where('email', $email)->get();
+        if ($cek_email->count() != 0) {
             return true;
-        }else{
+        } else {
             return false;
         }
     }
@@ -46,9 +47,9 @@ class DataUserController extends Controller
         $validated = $request->validate([
             'nama' => 'required|max:255',
             'email' => 'required|email',
-            'no_tlp' => 'required',
+            'no_tlp' => 'required|max:15|min:7',
         ]);
-        if(!$this->cekEmail($request->input('email'))){
+        if (!$this->cekEmail($request->input('email'))) {
             $insert = EmailModel::create($request->all());
         }
         // $insert = EmailModel::create($request->all());
