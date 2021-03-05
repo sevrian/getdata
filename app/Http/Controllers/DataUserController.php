@@ -5,9 +5,13 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\EmailModel;
 use Illuminate\Support\Facades\Redirect;
+use Illuminate\Database\QueryException;
+use App\Http\Traits\ExtendsTrait;
+use Exception;
 
 class DataUserController extends Controller
 {
+    use ExtendsTrait;
     /**
      * Display a listing of the resource.
      *
@@ -49,12 +53,19 @@ class DataUserController extends Controller
             'email' => 'required|regex:/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$/i',
             'no_tlp' => 'required|max:15|min:9',
         ]);
-
-        if (!$this->cekEmail($request->input('email'))) {
-            $insert = EmailModel::create($request->all());
+        try {
+            $this->cekCalendar();
+            if (!$this->cekEmail($request->input('email'))) {
+                $insert = EmailModel::create($request->all());
+            }
+            return redirect::to('https://www.grandmercure.com/our-hotels/');               
+        }catch (Exception $e) {
+            $respon=[
+                'status' => 400,
+                'info'=>$e->getMessage(),
+            ];
+            return response()->json($respon, $respon['status']);
         }
-        $email=$request->input('email');
-        return redirect::to('https://www.grandmercure.com/our-hotels/');
     }
 
     /**
