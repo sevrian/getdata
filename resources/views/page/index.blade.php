@@ -129,7 +129,7 @@
                                                      </div>
                                                      <div class="col-md-8">
                                                          <div class="position-relative has-icon-left">
-                                                             <input type="text" id="fname-icon" class="form-control" name="nama" placeholder="Name">
+                                                             <input type="text" id="fname-icon" class="form-control" name="nama" placeholder="Name" value={{old('nama')}}>
                                                              <div class="form-control-position">
                                                                  <i class="feather icon-user"></i>
                                                              </div>
@@ -147,7 +147,7 @@
                                                      </div>
                                                      <div class="col-md-8">
                                                          <div class="position-relative has-icon-left">
-                                                             <input type="email" id="email-icon" class="form-control" name="email" placeholder="Email">
+                                                             <input type="text" id="email-icon" class="form-control" name="email" placeholder="Email" value={{old('email')}}>
                                                              <div class="form-control-position">
                                                                  <i class="feather icon-mail"></i>
                                                              </div>
@@ -165,7 +165,7 @@
                                                      </div>
                                                      <div class="col-md-8">
                                                          <div class="position-relative has-icon-left">
-                                                             <input type="number" id="contact-icon" class="form-control" name="no_tlp" placeholder="Mobile">
+                                                             <input type="number" id="contact-icon" class="form-control" name="no_tlp" placeholder="Mobile" value={{old('no_tlp')}}>
                                                              <div class="form-control-position">
                                                                  <i class="feather icon-smartphone"></i>
                                                              </div>
