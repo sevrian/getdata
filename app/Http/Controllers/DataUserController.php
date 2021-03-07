@@ -46,17 +46,28 @@ class DataUserController extends Controller
             return false;
         }
     }
+    public function messages()
+    {
+        return [
+            'no_tlp.required' => 'A message is required',
+        ];
+    }
     public function store(Request $request)
     {
         $validated = $request->validate([
             'nama' => 'required|max:255',
             'email' => 'required|regex:/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$/i',
-            'no_tlp' => 'required|max:15|min:9',
+            'mobile_number' => 'required|max:15|min:9',
         ]);
         try {
             $this->cekCalendar();
             if (!$this->cekEmail($request->input('email'))) {
-                $insert = EmailModel::create($request->all());
+                $data_insert=[
+                    'nama'=>$request->input('nama'),
+                    'email'=>$request->input('email'),
+                    'no_tlp'=>$request->inpur('mobile_number'),
+                ];
+                $insert = EmailModel::create($data);
             }
             return redirect::to('https://www.grandmercure.com/our-hotels/');               
         }catch (Exception $e) {

@@ -165,12 +165,12 @@
                                                      </div>
                                                      <div class="col-md-8">
                                                          <div class="position-relative has-icon-left">
-                                                             <input type="number" id="contact-icon" class="form-control" name="no_tlp" placeholder="Mobile" value={{old('no_tlp')}}>
+                                                             <input type="number" id="contact-icon" class="form-control" name="mobile_number" placeholder="Mobile" value={{old('mobile_number')}}>
                                                              <div class="form-control-position">
                                                                  <i class="feather icon-smartphone"></i>
                                                              </div>
                                                          </div>
-                                                         @error('no_tlp')
+                                                         @error('mobile_number')
                                                             <p class="text-danger">{{ $message }}</p>
                                                         @enderror
                                                      </div>
