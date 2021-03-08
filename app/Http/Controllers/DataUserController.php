@@ -59,8 +59,7 @@ class DataUserController extends Controller
                 'nama' => 'required|max:255',
                 'email' => 'required|regex:/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$/i',
                 'mobile_number' => 'required|min:9|max:15'
-            ],
-            ['mobile_number.required|min:9|max:15' => 'Mobile number is not valid']
+            ]
         );
         // $customMessages = [
         //     'mobile_number.required' => 'The :attribute field can not be blank.'
