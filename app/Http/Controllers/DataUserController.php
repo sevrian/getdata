@@ -75,7 +75,7 @@ class DataUserController extends Controller
                     'email' => $request->input('email'),
                     'no_tlp' => $request->input('mobile_number'),
                 ];
-                $insert = EmailModel::create($data);
+                $insert = EmailModel::create($data_insert);
             }
             return redirect::to('https://www.grandmercure.com/our-hotels/');
         } catch (Exception $e) {
