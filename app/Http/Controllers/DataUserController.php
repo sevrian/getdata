@@ -46,34 +46,43 @@ class DataUserController extends Controller
             return false;
         }
     }
-    public function messages()
-    {
-        return [
-            'no_tlp.required' => 'A message is required',
-        ];
-    }
+    // public function messages()
+    // {
+    //     return [
+    //         'no_tlp.required' => 'A message is required',
+    //     ];
+    // }
     public function store(Request $request)
     {
-        $validated = $request->validate([
-            'nama' => 'required|max:255',
-            'email' => 'required|regex:/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$/i',
-            'mobile_number' => 'required|max:15|min:9',
-        ]);
+        $request->validate(
+            [
+                'nama' => 'required|max:255',
+                'email' => 'required|regex:/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$/i',
+                'mobile_number' => 'required|min:9|max:15'
+            ],
+            ['mobile_number.required|min:9|max:15' => 'Mobile number is not valid']
+        );
+        // $customMessages = [
+        //     'mobile_number.required' => 'The :attribute field can not be blank.'
+        // ];
+
+        // $this->validate($request, $customMessages);
+
         try {
             $this->cekCalendar();
             if (!$this->cekEmail($request->input('email'))) {
-                $data_insert=[
-                    'nama'=>$request->input('nama'),
-                    'email'=>$request->input('email'),
-                    'no_tlp'=>$request->inpur('mobile_number'),
+                $data_insert = [
+                    'nama' => $request->input('nama'),
+                    'email' => $request->input('email'),
+                    'no_tlp' => $request->input('mobile_number'),
                 ];
                 $insert = EmailModel::create($data);
             }
-            return redirect::to('https://www.grandmercure.com/our-hotels/');               
-        }catch (Exception $e) {
-            $respon=[
+            return redirect::to('https://www.grandmercure.com/our-hotels/');
+        } catch (Exception $e) {
+            $respon = [
                 'status' => 400,
-                'info'=>$e->getMessage(),
+                'info' => $e->getMessage(),
             ];
             return response()->json($respon, $respon['status']);
         }

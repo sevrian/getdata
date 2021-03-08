@@ -165,7 +165,7 @@
                                                      </div>
                                                      <div class="col-md-8">
                                                          <div class="position-relative has-icon-left">
-                                                             <input type="number" id="contact-icon" class="form-control"    name="mobile_number" placeholder="Mobile" value={{old('mobile_number')}} required>
+                                                             <input type="number" id="contact-icon" class="form-control" name="mobile_number" placeholder="Mobile" value={{old('mobile_number')}}>
                                                              <div class="form-control-position">
                                                                  <i class="feather icon-smartphone"></i>
                                                              </div>
