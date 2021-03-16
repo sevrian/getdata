@@ -24,7 +24,7 @@ class EmailController extends Controller
                     ->latest();
             } else {
                 $data = DB::table('email')
-                    ->latest();
+                    ->get();
             }
             return datatables()->of($data)->make(true);
         }
