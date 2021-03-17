@@ -115,7 +115,7 @@
                                     
                                 @endif
                                 <div class="card-header" style="background-color: rgb(223, 223, 248); margin-bottom: 5px">
-                                  <p class="text-center"><h2>For access internet, please complete below format</h2> </p> 
+                                  <p class="text-center"><h2>For access internet, please complete the forms below</h2> </p> 
                                 </div>
                                 <div class="card-body">
                                  <form class="form form-horizontal" action="{{route('kuisioner.store')}}" method="post">
@@ -193,7 +193,7 @@
                                             </div>
                                              <div class="col-md-8 offset-md-4">
                                                  <button type="submit" class="btn btn-primary mr-1 mb-1">Submit</button>
-                                                 {{-- <button type="reset" class="btn btn-outline-warning mr-1 mb-1">Reset</button> --}}
+                                                 {{--<button type="button"  id='btnreset' class="btn btn-outline-warning mr-1 mb-1">Reset</button>--}}
                                              </div>
                                          </div>
                                      </div>
@@ -204,8 +204,6 @@
                     </div>
                 </section>
                 <!-- Basic Inputs end -->
-
-               <h2 class="text-danger">Tesing Only</h2>
             </div>
         </div>
     </div>
@@ -241,13 +239,19 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
 
-    <script src="{{  url  ( 'app-assets/js/scripts/forms/form-tooltip-valid.js')}}"></script>
+    <!-- <script src="{{  url  ( 'app-assets/js/scripts/forms/form-tooltip-valid.js')}}"></script> -->
     <!-- END: Page JS-->
     {{-- <script>
         $(Document).ready(function(){
             $('datatable').DataTable();
         });
     </script> --}}
+    <script>
+        $('#btnreset').click(function(){
+            // alert('dwadaw');
+            $('.form-control').val("")
+        })
+    </script>
 
 </body>
 <!-- END: Body-->
