@@ -23,7 +23,7 @@
                         </div>
                         <div class="col-md-4">
                             <button type="button" name="filter" id="filter" class="btn btn-primary">Filter</button>
-                            <button type="button" name="refresh" id="refresh" class="btn btn-default">Refresh</button>
+                            <button type="button" name="refresh" id="refresh" class="btn btn-warning">Refresh</button>
                         </div>
                     </div>
                     <br>
@@ -67,10 +67,9 @@
        serverSide: true,
        dom: 'Bfrtip',
         buttons: [
-         
             {
                 extend: 'excel',
-                title: 'ExportData'
+                title: 'ExportDataUser'
             },
            
         ],
