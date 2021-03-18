@@ -70,7 +70,7 @@
          
             {
                 extend: 'excel',
-               
+                title: 'ExportData'
             },
            
         ],

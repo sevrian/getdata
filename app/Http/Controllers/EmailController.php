@@ -33,7 +33,7 @@ class EmailController extends Controller
 
     public function exportEmail()
     {
-        return Excel::download(new EmailExport, 'ExportEmail.xlsx');
+        return Excel::download(new EmailExport, 'DaftarEmail.xlsx');
     }
     /**
      * Show the form for creating a new resource.
