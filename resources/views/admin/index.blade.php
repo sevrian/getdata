@@ -62,6 +62,8 @@
      function load_data(from_date = '', to_date = '')
      {
       $('#datatable').DataTable({
+       // paging:   false,
+       pageLength: 100,
        serverSide: true,
        dom: 'Bfrtip',
         buttons: [
